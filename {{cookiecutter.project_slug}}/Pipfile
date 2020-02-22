@@ -29,7 +29,7 @@ django-redis-sessions = "*"
 schedule = "*"
 uWSGI = "*"
 {% endif -%}
-djangorestframework = "*"
+djangorestframework = "<3.9"
 django-rest-auth = "*"
 django_polymorphic = "*"
 django-admin-sortable2 = "*"
@@ -41,7 +41,8 @@ phonenumbers = "*"
 djangocms-bootstrap = "*"
 elasticsearch = "<1.8"
 libsass = "*"
-django-shop = "<1.2"
+#django-shop = "<1.2"
+django-shop = {git = "https://github.com/awesto/django-shop.git", editable = true, ref = "b584aa75435d393daf9989f1de0555e4cf23d140"}
 {% if cookiecutter.use_stripe == 'y' -%}
 djangoshop-stripe = "*"  {# "{{ cookiecutter.version }}" #}
 stripe = "<1.54"
