@@ -20,7 +20,7 @@ services:
 
   elasticsearch:
     image: elasticsearch:1.7.5
-    container_name: elasticsearch
+    #container_name: elasticsearch
     environment:
       - cluster.name=docker-cluster
       - bootstrap.memory_lock=true
