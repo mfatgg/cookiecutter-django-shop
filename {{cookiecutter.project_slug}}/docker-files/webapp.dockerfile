@@ -1,4 +1,4 @@
-FROM python:3.6.6
+FROM python:3.7
 LABEL Description="{{ cookiecutter.description }}" Maintainer="{{ cookiecutter.author_name }}"
 RUN mkdir /web
 WORKDIR /web
@@ -7,7 +7,7 @@ ARG DJANGO_STATIC_ROOT=/web/staticfiles
 
 # install packages outside of PyPI
 RUN apt-get upgrade -y
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get install -y nodejs optipng jpegoptim
 RUN pip install --upgrade pip
 {%- if cookiecutter.dockerize == "runserver" %}
